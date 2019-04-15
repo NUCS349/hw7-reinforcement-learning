@@ -5,7 +5,9 @@ here, we will check.
 
 
 In this assignment, you will:
-- FILL IN
+- Implement two reinforcement learning algorithms
+- Learn how to interface with OpenAI Gym environments
+- Investigate the performance of your algorithms and the effects of various hyperparameters
 
 ## Clone this repository
 
@@ -38,3 +40,4 @@ at the root directory of the assignment repository.
 ## Questions? Problems? Issues?
 
 Simply open an issue on the starter code repository for this assignment [here](https://github.com/NUCS349/hw8-reinforcement-learning/issues). Someone from the teaching staff will get back to you through there!
+
