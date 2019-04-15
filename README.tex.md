@@ -5,7 +5,9 @@ here, we will check.
 
 
 In this assignment, you will:
-- FILL IN
+- Implement two reinforcement learning algorithms
+- Learn how to interface with OpenAI Gym environments
+- Investigate the performance of your algorithms and the effects of various hyperparameters
 
 ## Clone this repository
 
