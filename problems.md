@@ -50,7 +50,7 @@ To answer some of these questions, you will have to write extra code (that is no
 ## 5. (1 point) Markov Decision Processes
    - a. (0.25 points) Consider the following environment: you are designing a trash-collecting robot. The robot is rewarded 1 point for each piece of trash it collects, and 10 points for each piece of trash it places in the trash bin. Assume we modify the environment so that there is a 10% chance at each time step of the robot suddenly failing. If the robot fails, it can no longer increase its reward. How does this modification affect the optimal behavior of the robot? Describe how to modify the MDP formulation to account for these spurious failures.
    - b. (0.75 points) Consider the following environment, in which circles represent states, double circles represent the goal, and arrows represent actions. Assume you start at state 0. Assume all actions are deterministic. Rewards are 0 for all states except the goal, which has a reward of 1.
-      [Markov Decision Process](https://github.com/NUCS349/hw8-reinforcement-learning-maxrmorrison/blob/master/images/mdp.png "Markov Decision Process")
+      ![Markov Decision Process](https://github.com/NUCS349/hw8-reinforcement-learning-maxrmorrison/blob/master/images/mdp.png "Markov Decision Process")
       - 1. (0.25 points) What are the optimal state-values and state-action-values for this environment?
       - 2. (0.25 points) What is the optimal policy for this environment?
       - 3. (0.25 points) Assume we introduce a discount factor of 0.95 into our value functions. Determine the new values of the optimal value functions as well as the optimal policy. Describe the effect of the discount factor on the optimal policy.
