@@ -23,8 +23,8 @@ class QLearning:
         """
         Trains an agent using Q-Learning on an OpenAI Gym Environment.
 
-        See page 107 of Sutton and Barto's book Reinformcement Learning for
-        pseudocode (http://incompleteideas.net/book/bookdraft2017nov5.pdf).
+        See page 131 of Sutton and Barto's book Reinformcement Learning for
+        pseudocode (http://incompleteideas.net/book/RLbook2018.pdf).
         Initialize your parameters as all zeros. For the step size (alpha), use
         1 / N, where N is the number of times the current action has been
         performed in the current state. Use an epsilon-greedy policy for action
