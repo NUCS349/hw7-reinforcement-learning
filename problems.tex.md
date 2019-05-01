@@ -29,12 +29,20 @@ To answer some of these questions, you will have to write extra code (that is no
    - c. (0.25 points) Reinforcement learning can be thought of as a type of _active_ learning, in which the learner influences the subsequent sequence of examples used during training. Active learning can also be used in supervised learning to increase the speed of training by selecting more difficult examples to train on. Briefly describe how to incorporate active learning within a supervised learning algorithm. Specifically, describe how you would determine the "difficulty" of an example and how you would increase the impact of difficult examples within the learning process.
 
 ## 2. (1 point) Bandits vs Q-Learning
-   - a. (0.5 points) Setup an experiment to train both the `MultiArmedBandit` and `QLearning` models on the `SlotMachines` environment. Use the default values for `epsilon` and `discount`. Train 10 learners of both kinds, for 10000 steps per learner. For the `MultiArmedBandit`  plot the averaged `rewards` arrays learned by the 10 learners on one plot. Do the same for `QLearning`. The averaged `rewards` array is the element-wise average over the 10 iterations and should be of length 100. Label each line in your plot with its associated model. Include your plot and answer the following questions:
+Set up an experiment to train both the `MultiArmedBandit` and `QLearning` models on the `SlotMachines` environment. Use the default values for `epsilon` and `discount`.
+   - a. (0.25 points)  Train 10  `MultiArmedBandit` learners, each for 10,000 steps. Average the rewards arrays learned by the 10 learners. Plot the averaged `rewards` array.
+   
+   - b. (0.25 points) Repeat what you did for `MultiArmedBandit`, but this time for `QLearning.` Plot the averaged  `QLearning rewards` array ** on the same plot ** as the `MultiArmedBandit` rewards array. Make sure to label each line in your plot with its associated model. 
+   
+   Include your plot and answer the following questions:
       - 1. (0.25 points) Why is it important that we average over multiple independent trainings for the same learner? How does this affect the variance of the observed reward?
       - 2. (0.25 points) How does the perforamce of the two learners differ on the `SlotMachines` environment?
-   - b. (0.5 points) Repeat the experiment performed in part a, but this time use the `FrozenLake-v0` environment. Include your plot and answer the following questions:
-      - 1. (0.25 points) How does the perforamce of the two learners differ on the `FrozenLake-v0` environment?
-      - 2. (0.25 points) You should observe that one of your learners underfits on this environment. Identify which learner underfits and describe how that underfitting occurs via the inductive bias of that learner.
+
+   - b. (0.5 points) Repeat the experiment performed in parts a and b, but this time use the `FrozenLake-v0` environment. Include your plot and answer the following questions:
+      - 1. (0.25 points) How does the performance of the two learners differ on the `FrozenLake-v0` environment?
+      - 2. (0.25 points) Look at the plot of the average rewards for `FrozenLake-v0`. From this,   identify which learner underfits and describe how that underfitting occurs via the inductive bias of that learner.
+
+      ** QUESTION: What do you want them to learn? To detect underfitting by looking at a rewards function? To think about model capacity vs the problem? **
 
 ## 3. (1.5 points) Exploration vs Exploitation
    - a. (0.75 points) Setup an experiment to train the `QLearning` model on the `FrozenLake-v0` environment for values of $\epsilon \in [0, 0.001, 0.01, 0.1, 0.5]$. For each value, train the `QLearning` 10 times over 10000 steps with the default discount rate of 0.95. See `test_q_learning` for an example of how to run your model on an OpenAI Gym Environment. For each value of epsilon, plot the averaged `rewards` arrays on one plot. Label each line in your plot with its associated $\epsilon$ value. Include your plots and answer the following questions:
