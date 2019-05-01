@@ -12,21 +12,24 @@ Your grade for this section is defined by the autograder. If it says you got an 
 you get 4 points here. Suggested order for passing test_cases:
 
 1. test_bandit_slots
-2. test_bandit_frozen_lake
+2073. test_bandit_frozen_lake
 3. test_q_learning_slots
 4. test_q_learning_frozen_lake
 
-To answer some of these questions, you will have to write extra code (that is not covered by the test cases). You may include your experiments in new files in the `experiments` directory. See `experiments/example.py` for an example. You can run any experiments you create within this directory with `python -m experiments.<experiment_name>`. For example, `python -m experiments.example` runs the example experiment.
 
 # Free-response questions (5 points)
+To answer some of these questions, you will have to write extra code (that is not covered by the test cases). You may include your experiments in new files in the `experiments` directory. See `experiments/example.py` for an example. You can run any experiments you create within this directory with `python -m experiments.<experiment_name>`. For example, `python -m experiments.example` runs the example experiment.
 
 ## 1. (1 point) Reinforcement Learning vs Supervised Learning
    - a. (0.25 points) Describe at least two differences between reinforcement learning and supervised learning.
    - b. (0.5 points) While inefficient, it is possible to formulate any supervised learning problem as a reinforcement learning problem. Describe how to perform this conversion from supervised learning to reinforcement learning. Specifically, describe the states, actions, policy, and reward function.
-   - c. (0.25 points) Reinforcement learning is a type of _active_ learning, in which the learner influences the subsequent sequence of examples used during training. Active learning can also be used in supervised learning to increase the speed of training by selecting more difficult examples to train on. Briefly describe how to incorporate active learning within a supervised learning algorithm. Specifically, describe how you would determine the "difficulty" of an example and how you would increase the impact of difficult examples within the learning process.
+
+   ** Could this be made more specific? Pick a problem like handwritten digits on mnist with a perceptron? **
+
+   - c. (0.25 points) Reinforcement learning can be thought of as a type of _active_ learning, in which the learner influences the subsequent sequence of examples used during training. Active learning can also be used in supervised learning to increase the speed of training by selecting more difficult examples to train on. Briefly describe how to incorporate active learning within a supervised learning algorithm. Specifically, describe how you would determine the "difficulty" of an example and how you would increase the impact of difficult examples within the learning process.
 
 ## 2. (1 point) Bandits vs Q-Learning
-   - a. (0.5 points) Setup an experiment to train both the `MultiArmedBandit` and `QLearning` models on the `SlotMachines` environment. Use the default values for `epsilon` and `discount`. Train each learner 10 times over 10000 steps. For each learner, plot the averaged `rewards` arrays on one plot. The averaged `rewards` array is the element-wise average over the 10 iterations and should be of length 100. Label each line in your plot with its associated model. Include your plot and answer the following questions:
+   - a. (0.5 points) Setup an experiment to train both the `MultiArmedBandit` and `QLearning` models on the `SlotMachines` environment. Use the default values for `epsilon` and `discount`. Train 10 learners of both kinds, for 10000 steps per learner. For the `MultiArmedBandit`  plot the averaged `rewards` arrays learned by the 10 learners on one plot. Do the same for `QLearning`. The averaged `rewards` array is the element-wise average over the 10 iterations and should be of length 100. Label each line in your plot with its associated model. Include your plot and answer the following questions:
       - 1. (0.25 points) Why is it important that we average over multiple independent trainings for the same learner? How does this affect the variance of the observed reward?
       - 2. (0.25 points) How does the perforamce of the two learners differ on the `SlotMachines` environment?
    - b. (0.5 points) Repeat the experiment performed in part a, but this time use the `FrozenLake-v0` environment. Include your plot and answer the following questions:
