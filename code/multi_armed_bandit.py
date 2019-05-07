@@ -29,11 +29,18 @@ class MultiArmedBandit:
         Hints:
           - Use env.action_space.n and env.observation_space.n to get the
             number of available actions and states, respectively.
-          - Remember to reset your environment at the end of each episode.
+          - Remember to reset your environment at the end of each episode. To
+            do this, call env.reset() whenever the value of "done" returned
+            from env.step() is True.
           - If all values of a np.array are equal, np.argmax deterministically
             returns 0.
           - In order to avoid non-deterministic tests, use only np.random for
             random number generation.
+          - MultiArmedBandit treats all environment states the same. However,
+            in order to have the same API as agents that model state, you must
+            explicitly return the state-action-values Q(s, a). To do so, just
+            copy the action values learned by MultiArmedBandit S times, where
+            S is the number of states.
 
         Arguments:
           env - (Env) An OpenAI Gym environment with discrete actions and

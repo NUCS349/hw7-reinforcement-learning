@@ -28,7 +28,10 @@ class QLearning:
         Initialize your parameters as all zeros. For the step size (alpha), use
         1 / N, where N is the number of times the current action has been
         performed in the current state. Use an epsilon-greedy policy for action
-        selection.
+        selection. Note that unlike the pseudocode, we are looping over a total
+        number of steps, and not a total number of episodes. This allows us to
+        ensure that all of our trials have the same number of steps--and thus
+        roughly the same amount of computation time.
 
         See (https://gym.openai.com/) for examples of how to use the OpenAI
         Gym Environment interface.
@@ -36,11 +39,15 @@ class QLearning:
         Hints:
           - Use env.action_space.n and env.observation_space.n to get the
             number of available actions and states, respectively.
-          - Remember to reset your environment at the end of each episode.
+          - Remember to reset your environment at the end of each episode. To
+            do this, call env.reset() whenever the value of "done" returned
+            from env.step() is True.
           - If all values of a np.array are equal, np.argmax deterministically
             returns 0.
           - In order to avoid non-deterministic tests, use only np.random for
             random number generation.
+          - Use the provided self._get_epsilon function whenever you need to
+            obtain the current value of epsilon.
 
         Arguments:
           env - (Env) An OpenAI Gym environment with discrete actions and

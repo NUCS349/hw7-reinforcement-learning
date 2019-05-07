@@ -15,7 +15,7 @@ def test_q_learning_slots():
     env.seed(0)
     means = np.array([m.mean for m in env.machines])
 
-    agent = QLearning(epsilon=0.1, discount=0)
+    agent = QLearning(epsilon=0.2, discount=0)
     state_action_values, rewards = agent.fit(env, steps=10000)
 
     assert state_action_values.shape == (1, 10)
@@ -36,7 +36,7 @@ def test_q_learning_frozen_lake():
     env = gym.make('FrozenLake-v0')
     env.seed(0)
 
-    agent = QLearning(epsilon=0.1, discount=0.95)
+    agent = QLearning(epsilon=0.2, discount=0.95)
     state_action_values, rewards = agent.fit(env, steps=10000)
 
     state_values = np.mean(state_action_values, axis=1)

@@ -15,7 +15,7 @@ def test_bandit_slots():
     env = gym.make('SlotMachines-v0', n_machines=10, mean_range=(-10, 10), std_range=(5, 10))
     means = np.array([m.mean for m in env.machines])
 
-    agent = MultiArmedBandit(epsilon=0.01)
+    agent = MultiArmedBandit(epsilon=0.2)
     state_action_values, rewards = agent.fit(env, steps=10000)
 
     assert state_action_values.shape == (1, 10)
@@ -33,7 +33,7 @@ def test_bandit_frozen_lake():
     env = gym.make('FrozenLake-v0')
     env.seed(0)
 
-    agent = MultiArmedBandit(epsilon=0.1)
+    agent = MultiArmedBandit(epsilon=0.2)
     state_action_values, rewards = agent.fit(env, steps=10000)
 
     assert state_action_values.shape == (16, 4)
