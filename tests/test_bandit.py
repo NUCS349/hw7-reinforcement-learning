@@ -19,16 +19,20 @@ def test_bandit_slots():
     state_action_values, rewards = agent.fit(env, steps=10000)
 
     assert state_action_values.shape == (1, 10)
-    assert np.argmax(means) == np.argmax(state_action_values)
     assert len(rewards) == 100
+    assert np.argmax(means) == np.argmax(state_action_values)
+
+    states, actions, rewards = agent.predict(env, state_action_values)
+    assert action == np.argmax(means)
 
 
 def test_bandit_frozen_lake():
     """
-    Tests that the MultiArmedBandit implementation successfully finds the slot
-    machine with the largest expected reward.
+    Tests the MultiArmedBandit implementation on the FrozenLake-v0 environment.
     """
     from code import MultiArmedBandit
+
+    np.random.seed(0)
 
     env = gym.make('FrozenLake-v0')
     env.seed(0)

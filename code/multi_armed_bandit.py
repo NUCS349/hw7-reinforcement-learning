@@ -10,7 +10,7 @@ class MultiArmedBandit:
         rather than exploiting the best action.
     """
 
-    def __init__(self, epsilon=0.01):
+    def __init__(self, epsilon=0.2):
         self.epsilon = epsilon
 
     def fit(self, env, steps=1000):

@@ -55,16 +55,16 @@ class SlotMachines(gym.Env):
             SlotMachines.
           reward - (float) The reward gained by taking an action.
           done - (bool) Whether the environment has been completed and requires
-            resetting. This is always False for SlotMachines.
+            resetting. This is always True for SlotMachines.
           info - (dict) A dictionary of additional return values used for
             debugging purposes.
         """
         assert self.action_space.contains(action)
-        return 0, self.machines[action].pull(), False, {}
+        return 0, self.machines[action].pull(), True, {}
 
     def reset(self):
         """
-        Resets the environment. For SlotMachines, this always returns 0..
+        Resets the environment. For SlotMachines, this always returns 0.
         """
         return 0
 

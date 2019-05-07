@@ -14,7 +14,7 @@ class QLearning:
         values of epsilon during training
     """
 
-    def __init__(self, epsilon=0.01, discount=0.95, adaptive=False):
+    def __init__(self, epsilon=0.2, discount=0.95, adaptive=False):
         self.epsilon = epsilon
         self.discount = discount
         self.adaptive = adaptive
