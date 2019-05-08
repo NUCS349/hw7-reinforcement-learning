@@ -83,7 +83,7 @@ def test_q_learning_deterministic():
         [0.0, 0.0, 0.0, 0.0]
     ])
 
-    states, actions, rewards = env.predict(env, state_action_values)
+    states, actions, rewards = agent.predict(env, state_action_values)
     assert np.all(states == np.array([4, 8, 9, 10, 14, 15]))
     assert np.all(actions == np.array([1, 1, 2, 2, 1, 2]))
     assert np.all(rewards == np.array([0, 0, 0, 0, 0, 1]))
