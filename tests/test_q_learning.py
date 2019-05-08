@@ -23,8 +23,8 @@ def test_q_learning_slots():
     assert np.argmax(means) == np.argmax(state_action_values)
 
     states, actions, rewards = agent.predict(env, state_action_values)
-    assert actions == [np.argmax(means)]
-    assert len(states) == 0 and states[0] == 0
+    assert len(actions) == 1 and actions[0] == np.argmax(means)
+    assert len(states) == 1 and states[0] == 0
     assert len(rewards) == 1
 
 def test_q_learning_frozen_lake():
@@ -63,7 +63,7 @@ def test_q_learning_deterministic():
     env = gym.make('FrozonLakeNoSlippery-v0')
     env.seed(0)
 
-    agent = QLearning(epsilon=0.2, discount=0.95)
+    agent = QLearning(epsilon=0.5, discount=0.95)
     state_action_values = np.array([
         [0.0, 0.7, 0.3, 0.0],
         [0.0, 1.0, 0.0, 0.0],

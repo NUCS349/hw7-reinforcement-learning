@@ -23,7 +23,9 @@ def test_bandit_slots():
     assert np.argmax(means) == np.argmax(state_action_values)
 
     states, actions, rewards = agent.predict(env, state_action_values)
-    assert action == np.argmax(means)
+    assert len(states) == 1
+    assert len(actions) == 1 and actions[0] == np.argmax(means)
+    assert len(rewards) == 1
 
 
 def test_bandit_frozen_lake():
