@@ -25,8 +25,8 @@ class SlotMachines(gym.Env):
 
     def __init__(self, n_machines=10, mean_range=(-10, 10), std_range=(5, 10)):
         # Initialize N slot machines with random means and std_devs
-        means = sample_in_range(n_machines, mean_range[0], mean_range[1])
-        std_devs = sample_in_range(n_machines, std_range[0], std_range[1])
+        means = np.random.uniform(mean_range[0], mean_range[1], n_machines)
+        std_devs = np.random.uniform(std_range[0], std_range[1], n_machines)
         self.machines = [SlotMachine(m, s) for (m, s) in zip(means, std_devs)]
 
         # Required by OpenAI Gym
@@ -73,18 +73,3 @@ class SlotMachines(gym.Env):
         Render the environment display. For SlotMachines, this is a no-op.
         """
         pass
-
-
-def sample_in_range(n, low, high):
-    """
-    Uniformly draws n samples from within the interval [low, high)
-
-    Arguments:
-      n - (int) Number of samples to take
-      low - (float) Lower bound of samples
-      high - (float)  Upper bound of samples
-
-    Returns:
-      samples - (np.array) n uniform samples in [low, high)]
-    """
-    return np.random.rand(n) * (high - low) + ((high + low) / 2)
