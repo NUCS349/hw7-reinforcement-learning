@@ -27,11 +27,13 @@ class QLearning:
         pseudocode (http://incompleteideas.net/book/RLbook2018.pdf).
         Initialize your parameters as all zeros. For the step size (alpha), use
         1 / N, where N is the number of times the current action has been
-        performed in the current state. Use an epsilon-greedy policy for action
-        selection. Note that unlike the pseudocode, we are looping over a total
-        number of steps, and not a total number of episodes. This allows us to
-        ensure that all of our trials have the same number of steps--and thus
-        roughly the same amount of computation time.
+        performed in the current state. Note that this is a different formula
+        for the step size than was used in MultiArmedBandits. Use an
+        epsilon-greedy policy for action selection. Note that unlike the
+        pseudocode, we are looping over a total number of steps, and not a
+        total number of episodes. This allows us to ensure that all of our
+        trials have the same number of steps--and thus roughly the same amount
+        of computation time.
 
         See (https://gym.openai.com/) for examples of how to use the OpenAI
         Gym Environment interface.
