@@ -52,4 +52,4 @@ Here we will setup an experiment to train both the `MultiArmedBandit` and `QLear
    - b. (0.75 points) Consider the following environment represented as a directed graph, in which circles represent states, double circles represent the goal, and arrows represent actions. Assume you start at state 0. Assume all actions are deterministic. Transitioning to state 1 produces a reward of 0, while transitioning to state 2 produces a reward of 1.
       - 1. (0.25 points) What are the optimal state-values and state-action-values for this environment?
       - 2. (0.25 points) What is the optimal policy for this environment?
-      - 3. (0.25 points) Assume we introduce a discount factor of 0.95 into our value functions. Determine the new values of the state-value and state-action-value functions as well as the optimal policy. Describe the effect of the discount factor on the optimal policy.
+      - 3. (0.25 points) Assume we introduce a discount factor of 0.95 into our value functions. Determine the new values of the state-value and state-action-value functions as well as the new optimal policy. Describe the effect of the discount factor on the optimal policy.
