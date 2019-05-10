@@ -6,7 +6,7 @@ Your task is to implement two reinforcement learning algorithms:
 1.  Q-Learning (in `code/q_learning.py`)
 
 Your goal is to pass the test suite (contained in `tests/`). Once the tests are passed, you
-may move on to the next part - reporting your results.
+may move on to the next part: reporting your results.
 
 Your grade for this section is defined by the autograder. If it says you got an 80/100,
 you get 4 points here. Suggested order for passing test_cases:
