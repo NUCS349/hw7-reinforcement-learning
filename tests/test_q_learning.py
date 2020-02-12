@@ -7,7 +7,7 @@ def test_q_learning_slots():
     Tests that the Qlearning implementation successfully finds the slot
     machine with the largest expected reward.
     """
-    from code import QLearning
+    from src import QLearning
 
     np.random.seed(0)
 
@@ -32,7 +32,7 @@ def test_q_learning_frozen_lake():
     Tests that the QLearning implementation successfully learns the
     FrozenLake-v0 environment.
     """
-    from code import QLearning
+    from src import QLearning
 
     np.random.seed(0)
 
@@ -56,7 +56,7 @@ def test_q_learning_deterministic():
     Tests that the QLearning implementation successfully navigates a
     deterministic environment with provided state-action-values.
     """
-    from code import QLearning
+    from src import QLearning
 
     np.random.seed(0)
 

@@ -1,5 +1,5 @@
 import gym
-from code import MultiArmedBandit
+from src import MultiArmedBandit
 
 print('Starting example experiment')
 

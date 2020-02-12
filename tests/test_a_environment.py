@@ -7,6 +7,6 @@ def test_imports():
     the 'a' in the file name is so this test is run first on a clean Python interpreter.
     """
     import sys
-    import code
+    import src
     assert 'sklearn' not in sys.modules.keys()
     assert 'scipy.stats' not in sys.modules.keys()

@@ -7,7 +7,7 @@ def test_bandit_slots():
     Tests that the MultiArmedBandit implementation successfully finds the slot
     machine with the largest expected reward.
     """
-    from code import MultiArmedBandit
+    from src import MultiArmedBandit
 
     np.random.seed(0)
 
@@ -31,7 +31,7 @@ def test_bandit_frozen_lake():
     """
     Tests the MultiArmedBandit implementation on the FrozenLake-v0 environment.
     """
-    from code import MultiArmedBandit
+    from src import MultiArmedBandit
 
     np.random.seed(0)
 
