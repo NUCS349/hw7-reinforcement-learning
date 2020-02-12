@@ -6,7 +6,7 @@ from .q_learning import QLearning
 
 register(
     id='{}-{}'.format('SlotMachines', 'v0'),
-    entry_point='code:{}'.format('SlotMachines'),
+    entry_point='src:{}'.format('SlotMachines'),
     max_episode_steps=1,
     nondeterministic=True)
 
