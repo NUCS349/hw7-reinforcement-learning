@@ -1,17 +1,17 @@
-# HW7: Reinforcement Learning for EECS 349 @ NU
+# HW 7: Reinforcement Learning for EECS 349 @ NU
 **IMPORTANT: PUT YOUR NETID IN THE FILE** `netid` in the root directory of the assignment.
 This is used to put the autograder output into Canvas. Please don't put someone else's netid
 here, we will check.
 
 
 In this assignment, you will:
-- Implement two reinforcement learning algorithms
+- Implement two Reinforcement Learning algorithms
 - Learn how to interface with OpenAI Gym environments
-- Investigate the performance of your algorithms and the effects of various hyperparameters
+- Investigate the performance of your algorithms and the effects of various hyperparameters.
 
 ## Clone this repository
 
-To clone this repository install GIT on your computer and copy the link of the repository (find above at "Clone or Download") and enter in the command line:
+To clone this repository, install GIT on your computer and copy the link of the repository (find above at "Clone or Download") and enter in the command line:
 
 ``git clone YOUR-LINK``
 
